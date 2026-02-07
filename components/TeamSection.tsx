@@ -1,13 +1,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import marceloHeadshot from '../assets/marcelo.jpg';
+import tercioHeadshot from '../assets/tercio.jpg';
 
 export const TeamSection: React.FC = () => {
+  const placeholderAvatar = "data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20400'%3E%3Crect%20width='400'%20height='400'%20fill='%230c0c0c'/%3E%3Ccircle%20cx='200'%20cy='150'%20r='80'%20fill='%232a2a2a'/%3E%3Cpath%20d='M80%20360c20-90%2080-130%20120-130s100%2040%20120%20130'%20fill='%232a2a2a'/%3E%3C/svg%3E";
   const team = [
     {
       name: "Marcelo Santos",
       role: "Founder · Software Engineer",
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQF3zqYpYnKpnw/profile-displayphoto-scale_400_400/B4DZpQmL_qKUAg-/0/1762288780883?e=1772064000&v=beta&t=UChlr0wW9N_et6xOXpcnH2JmD1L3GoJUUnhVOCEe07Q", // Placeholder for professional headshot
+      image: marceloHeadshot,
       bio: "Focuses on automation, applied AI, and full-stack development. Marcelo combines technical depth with a product-oriented mindset.",
       links: [
         { label: "LinkedIn", url: "https://www.linkedin.com/in/marcelo-m7/" },
@@ -17,7 +20,7 @@ export const TeamSection: React.FC = () => {
     {
       name: "Tércio Barreto",
       role: "Collaborator · Strategy",
-      image: "https://media.licdn.com/dms/image/v2/C4D03AQGq6D5M3MH0Hg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1660825332888?e=1772064000&v=beta&t=vaoNvfZu0hwqa2erSAmXFXMk_1zWak4We2UcnJfxyVk", // Placeholder for professional headshot
+      image: tercioHeadshot,
       bio: "Brings experience in technology strategy and systems thinking, aligning technology with real-world business needs.",
       links: [
         { label: "LinkedIn", url: "https://www.linkedin.com/in/t%C3%A9rcio-barreto-40a840120/" }
@@ -47,7 +50,16 @@ export const TeamSection: React.FC = () => {
               <div className="relative w-full lg:w-48 h-64 lg:h-48 shrink-0 overflow-hidden border-4 border-white group-hover:border-black transition-colors">
                 <motion.img 
                   src={member.image} 
-                  alt={member.name}
+                  alt={`${member.name} headshot`}
+                  loading="lazy"
+                  onError={(event) => {
+                    const target = event.currentTarget;
+                    if (target.dataset.fallbackApplied) {
+                      return;
+                    }
+                    target.dataset.fallbackApplied = "true";
+                    target.src = placeholderAvatar;
+                  }}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-brand-violet/20 mix-blend-multiply group-hover:bg-transparent transition-colors" />
