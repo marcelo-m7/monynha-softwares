@@ -7,7 +7,7 @@ export const TeamSection: React.FC = () => {
     {
       name: "Marcelo Santos",
       role: "Founder · Software Engineer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop", // Placeholder for professional headshot
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQF3zqYpYnKpnw/profile-displayphoto-scale_400_400/B4DZpQmL_qKUAg-/0/1762288780883?e=1772064000&v=beta&t=UChlr0wW9N_et6xOXpcnH2JmD1L3GoJUUnhVOCEe07Q", // Placeholder for professional headshot
       bio: "Focuses on automation, applied AI, and full-stack development. Marcelo combines technical depth with a product-oriented mindset.",
       links: [
         { label: "LinkedIn", url: "https://www.linkedin.com/in/marcelo-m7/" },
@@ -17,7 +17,7 @@ export const TeamSection: React.FC = () => {
     {
       name: "Tércio Barreto",
       role: "Collaborator · Strategy",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop", // Placeholder for professional headshot
+      image: "https://media.licdn.com/dms/image/v2/C4D03AQGq6D5M3MH0Hg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1660825332888?e=1772064000&v=beta&t=vaoNvfZu0hwqa2erSAmXFXMk_1zWak4We2UcnJfxyVk", // Placeholder for professional headshot
       bio: "Brings experience in technology strategy and systems thinking, aligning technology with real-world business needs.",
       links: [
         { label: "LinkedIn", url: "https://www.linkedin.com/in/t%C3%A9rcio-barreto-40a840120/" }
